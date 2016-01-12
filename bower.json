@@ -1,0 +1,23 @@
+{
+  "name": "givingYear",
+  "authors": [
+    "Rachel Porter <rachelandrewsporter@gmail.com>"
+  ],
+  "description": "an app for tracking charitable giving",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "Materialize": "materialize#~0.97.5"
+  }
+}
