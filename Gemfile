@@ -17,7 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ngannotate-rails'
 #  takes html templates and compiles them into javascript files that insert our templates into Angular's $templateCache
 gem 'angular-rails-templates'
-# fixes bug from above gem 
+# fixes bug from above gem
 gem 'sprockets', '2.12.3'
 
 # Use ActiveModel has_secure_password
