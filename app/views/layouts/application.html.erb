@@ -6,9 +6,9 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body data-ng-app="givingYear">
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
 </body>
 </html>

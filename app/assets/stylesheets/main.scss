@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.welcome {
+  background-image: url(asset-path('starrysky.jpeg'));
+  background-size: cover;
+  min-height: 250px;
+}
+
+.welcome-message {
+  color: white;
+  text-align: center;
+  padding-top: 3.5em;
+}
+
+.signup-button {
+  position: relative;
+  left: 40%;
+}
+
+.about {
+  padding: 30px;
+  background: rgb(59, 48, 55);
+  color: white;
+}
