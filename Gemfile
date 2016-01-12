@@ -19,6 +19,8 @@ gem 'ngannotate-rails'
 gem 'angular-rails-templates'
 # fixes bug from above gem
 gem 'sprockets', '2.12.3'
+# user authentication
+gem 'devise', '~> 3.4.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
