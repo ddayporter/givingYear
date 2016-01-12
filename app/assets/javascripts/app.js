@@ -1,5 +1,5 @@
 angular
-  .module("givingYear", ['ui.router', 'templates'])
+  .module("givingYear", ['ui.router', 'templates', 'Devise'])
   .config([
     '$stateProvider',
     '$urlRouterProvider',
