@@ -2,10 +2,9 @@
   box-sizing: border-box;
 }
 
-.welcome {
+body {
   background-image: url(asset-path('starrysky.jpeg'));
   background-size: cover;
-  min-height: 250px;
 }
 
 .welcome-message {
@@ -17,10 +16,15 @@
 .signup-button {
   position: relative;
   left: 40%;
+  top: 20%;
 }
 
 .about {
   padding: 30px;
   background: rgb(59, 48, 55);
   color: white;
+}
+
+.nav-wrapper {
+  background: rgba(40, 32, 51, 0.5)
 }

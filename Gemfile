@@ -9,6 +9,8 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -21,6 +23,10 @@ gem 'angular-rails-templates'
 gem 'sprockets', '2.12.3'
 # user authentication
 gem 'devise', '~> 3.4.0'
+# required to use respond_with respond_to
+gem 'responders', '~> 2.0'
+# required for authentication with Angular
+gem 'angular_rails_csrf'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

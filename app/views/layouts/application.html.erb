@@ -3,15 +3,14 @@
 <head>
   <title>Make This Your Most GivingYear</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body data-ng-app="givingYear">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <div class="container">
-    <div ng-include="'nav/_nav.html'"></div>
-    <ui-view></ui-view>
-  </div>
+  <div ng-include="'nav/_nav.html'"></div>
+  <ui-view></ui-view>
 </body>
 </html>
