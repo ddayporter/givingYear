@@ -1,0 +1,24 @@
+<div class="row white">
+  <div class="about col s12 m6">
+    <div class="flow-text">
+      <h2>Saved Charities</h2>
+      <p>Here is the list of charities you have saved to your account</p>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <ul>
+      <li data-ng-repeat="charity in charities">{{charity.name}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row white">
+  <div class="about col s12 m6">
+    <div class="flow-text">
+      <h2>Your Giving</h2>
+      <p>Here is your total impact this year</p>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <h1>${{total_donations}}</h1>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row white">
+  <div class="about col s12 m6">
+    <div class="flow-text">
+      <h2>Find a Charity</h2>
+      <p>Use the search bar to find a charity by name.</p>
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <h2>
+      Results
+    </h2>
+    <ul data-ng-repeat="charity in charities">
+      <li>{{charity.organization_name}} - {{charity.city}}, {{charity.state}}</li>
+    </ul>
+  </div>
+</div>

@@ -3,7 +3,7 @@ angular
   .controller("HomeCtrl", [
     "$scope",
     function($scope){
-      $scope.charities = [
+      $scope.featured_charities = [
         "The Women's Center",
         "WAMU",
         "Love 146",

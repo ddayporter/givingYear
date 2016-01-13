@@ -1,14 +1,27 @@
 angular
-  .module("givingYear", ['ui.router', 'templates', 'Devise'])
+  .module("givingYear", ['ui.router', 'templates', 'Devise', 'ngResource'])
   .config([
     '$stateProvider',
     '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider){
+    RouterFunction
+  ]);
+
+    function RouterFunction($stateProvider, $urlRouterProvider){
       $stateProvider
         .state('home', {
-          url: '/home',
+          url: '',
           templateUrl: 'home/_home.html',
           controller: 'HomeCtrl'
+        })
+        .state('dashboard', {
+          url: '/dashboard',
+          templateUrl: 'dashboard/_dashboard.html',
+          controller: 'DashboardCtrl'
+        })
+        .state('search', {
+          url: '/search',
+          templateUrl: 'search/_search.html',
+          controller: 'CharityIndexCtrl'
         })
         .state('login', {
           url: '/login',
@@ -31,4 +44,3 @@ angular
           }]
         });
     }
-  ])
