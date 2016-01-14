@@ -1,46 +1,46 @@
 <div class="row white">
   <div class="about col s12 m6">
-    <div class="flow-text">
       <h2>Saved Charities</h2>
       <p>Here is the list of charities you have saved to your account</p>
+
+    <div data-ng-repeat="charity in charities | orderBy: '-name'">
+      <h3><a href="#/charities/{{charity.id}}">{{charity.name}}</a></h3>
+      <p>Donations: {{charity.donations.length}}</p>
     </div>
   </div>
+
   <div class="col s12 m6">
-    <div data-ng-repeat="charity in charities | orderBy: '-name'">
-      <a href="#/charities/{{charity.id}}">{{charity.name}}</a>
-    </div>
+    <form data-ng-submit="addCharity()">
+      <h3>Add a new charity</h3>
+      <div class="row">
+        <div class="input field col s8 offset-s2">
+          <input type="text" class="validate" placeholder="Organization Name" data-ng-model="name"></input>
+        </div>
+        <div class="input field col s8 offset-s2">
+          <input type="text" class="validate" placeholder="Address" data-ng-model="address"></input>
+        </div>
+        <div class="input field col s3 offset-s2">
+          <input type="text" class="validate" placeholder="City" data-ng-model="city"></input>
+        </div>
+        <div class="input field col s3">
+          <input type="text" class="validate" placeholder="State" data-ng-model="st"></input>
+        </div>
+        <div class="input field col s2">
+          <input type="text" class="validate" placeholder="ZIP" data-ng-model="zip"></input>
+        </div>
+        <div class="input field col s8 offset-s2">
+          <input type="text" class="validate" placeholder"http://" data-ng-model="website">
+        </div>
+        <div class="input field col s8 offset-s2">
+          <input type="text" class="validate" placeholder="Notes" data-ng-model="notes"></input>
+        </div>
+        <div class="col s8 offset-s2">
+          <button type="submit" class="btn waves-effect">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
-
-<form class="col s12 m6 offset-m3" data-ng-submit="addCharity()">
-  <h3>Add a new charity</h3>
-  <div class="row">
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="Name" data-ng-model="name"></input>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="Address" data-ng-model="address"></input>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="City" data-ng-model="city"></input>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="State" data-ng-model="st"></input>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="ZIP" data-ng-model="zip"></input>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder"website (include http://)" data-ng-model="website"></div>
-    </div>
-    <div class="input field col s6 offset-s3">
-      <input type="text" class="validate" placeholder="Notes" data-ng-model="notes"></input>
-    </div>
-    <div class="col s6 offset-s3">
-      <button type="submit" class="btn waves-effect">Submit</button>
-    </div>
-  </div>
-</form>
 
 
 <!-- <div class="row white">

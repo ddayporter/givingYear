@@ -1,21 +1,21 @@
-<div class="navbar-fixed">
+<div class="navbar-fixed" data-ng-controller="NavCtrl">
   <nav>
     <div class="nav-wrapper">
-      <a class="brand-logo" href="#/home">GivingYear</a>
+      <a class="brand-logo" href="/">GivingYear</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
         <li data-ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-        <li data-ng-hide="signedIn()"><a href="#/signup">Sign Up</a></li>
-        <li data-ng-show="signedIn()"><a href="#/">{{user.username}}</a></li>
-        <li data-ng-show="signedIn()"><a data-ng-click="logout()">Log out</a></li>
+        <li data-ng-hide="signedIn()"><a href="#/register">Sign Up</a></li>
+        <li data-ng-show="signedIn()"><a href="#/dashboard">{{user.username}}</a></li>
+        <li data-ng-show="signedIn()"><a data-ng-click="logout()" href="/">Log out</a></li>
       </ul>
 
       <ul class="side-nav" id="mobile-demo">
         <li data-ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-        <li data-ng-hide="signedIn()"><a href="#/signup">Sign Up</a></li>
-        <li data-ng-show="signedIn()"><a href="#/">{{user.username}}</a></li>
-        <li data-ng-show="signedIn()"><a data-ng-click="logout()">Log out</a></li>
+        <li data-ng-hide="signedIn()"><a href="#/register">Sign Up</a></li>
+        <li data-ng-show="signedIn()"><a href="#/dashboard">{{user.username}}</a></li>
+        <li data-ng-show="signedIn()"><a data-ng-click="logout()" href="/">Log out</a></li>
       </ul>
     </div>
   </nav>

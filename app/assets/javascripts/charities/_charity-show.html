@@ -17,7 +17,7 @@
 
       <div ng-repeat="donation in charity.donations | orderBy : '-created_at' : reverse">
         <h3>${{donation.amount}}</h3>
-        <p>Donation Date: {{donation.date}}</p>
+        <p>Donation Date: {{donation.date | date : 'M/d/yyyy'}}</p>
         <p>Notes: {{donation.notes}}</p>
       </div>
     </section>
