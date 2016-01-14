@@ -6,14 +6,17 @@ angular.module('givingYear')
     function($scope, charities, charity){
       $scope.charity = charity;
       $scope.addDonation = function(){
-        if($scope.body === '') { return; }
+        if($scope.amount === '') { return; }
         charities.addDonation(charity.id, {
-          body: $scope.body,
-          author: 'user',
+          amount: $scope.amount,
+          date: $scope.date,
+          notes: $scope.notes
         }).success(function(donation) {
           $scope.charity.donations.push(donation);
         });
-        $scope.body = '';
+        $scope.amount = '';
+        $scope.date = '';
+        $scope.notes = '';
       };
     }
   ]);

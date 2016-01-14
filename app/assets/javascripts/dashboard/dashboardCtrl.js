@@ -17,10 +17,11 @@ angular
         });
         $scope.name = '';
         $scope.address = '';
-        $scopecity = '';
-        $scopest = '';
-        $scopezip = '';
-        $scopenotes = '';
+        $scope.city = '';
+        $scope.st = '';
+        $scope.zip = '';
+        $scope.website = '';
+        $scope.notes = '';
       };
     }
   ])

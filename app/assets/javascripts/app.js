@@ -16,15 +16,22 @@ angular
         .state('dashboard', {
           url: '/dashboard',
           templateUrl: 'dashboard/_dashboard.html',
-          controller: 'DashboardCtrl'
+          controller: 'DashboardCtrl',
+          // resolve property of ui-router ensures charities are loaded from the backend
+          resolve: {
+            charityPromise: ['charities', function(charities){
+              return charities.getAll();
+            }]
+          }
         })
         .state('charities', {
           url: '/charities/{id}',
           templateUrl: 'charities/_charity-show.html',
           controller: 'CharitiesCtrl',
+          // resolve property of ui-router ensures referenced charity is loaded from backend
           resolve: {
-            charityPromise: ['charities', function(charities){
-              return charities.getAll();
+            charity: ['$stateParams', 'charities', function($stateParams, charities) {
+              return charities.get($stateParams.id);
             }]
           }
         })

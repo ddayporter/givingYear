@@ -1,28 +1,44 @@
+<div class="row">
+  <div class="about col s12 m6">
+    <section>
+      <h3>
+        <a data-ng-show="charity.website" href="{{charity.website}}">
+          {{charity.name}}
+        </a>
+        <span data-ng-hide="charity.website">
+          {{charity.name}}
+        </span>
+      </h3>
+      <h5>{{charity.city}}, {{charity.st}}</h5>
+    </section>
+    <section>
+      <h4>Donations</h4>
+      <p>Below are donations made to this organization. Use the form to add a new one if you've made a donation recently.</p>
 
-  <h2>
-      {{charity.name}}
-  </h2>
-  <p>{{charity.city}}, {{charity.state}}</p>
-
-  <div ng-repeat="donation in charity.donations | orderBy: '-date'">
-    <h3>{{donation.amount}} ({{donation.date}})</h3>
-    <p>Notes: {{donation.notes}}</p>
+      <div ng-repeat="donation in charity.donations | orderBy : '-created_at' : reverse">
+        <h3>${{donation.amount}}</h3>
+        <p>Donation Date: {{donation.date}}</p>
+        <p>Notes: {{donation.notes}}</p>
+      </div>
+    </section>
   </div>
-
-  <form class="col s12 m6 offset-m3" ng-submit="addDonation()">
-    <h3>Add a new donation</h3>
-    <div class="row">
-      <div class="input field col s6 offset-s3">
-        <input type="text" class="validate" placeholder="Amount" ng-model="amount"></input>
+  <div class="col s12 m6">
+    <form data-ng-submit="addDonation()">
+      <h3>Add a new donation</h3>
+      <div class="row">
+        <div class="input field col s6 offset-s3">
+          <input type="text" class="validate" placeholder="Amount" data-ng-model="amount"></input>
+        </div>
+        <div class="input field col s6 offset-s3">
+          <input type="text" class="validate" placeholder="Date (MM/DD/YYYY)" data-ng-model="date"></input>
+        </div>
+        <div class="input field col s6 offset-s3">
+          <input type="text" class="validate" placeholder="notes" data-ng-model="notes"></input>
+        </div>
+        <div class="col s6 offset-s3">
+          <button type="submit" class="btn waves-effect">Submit</button>
+        </div>
       </div>
-      <div class="input field col s6 offset-s3">
-        <input type="text" class="validate" placeholder="Date" ng-model="date"></input>
-      </div>
-      <div class="input field col s6 offset-s3">
-        <input type="textarea" class="validate" placeholder="notes" ng-model="notes"></input>
-      </div>
-      <div class="col s6 offset-s3">
-        <button type="submit" class="btn waves-effect">Submit</button>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
+</div>
