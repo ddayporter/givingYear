@@ -15,12 +15,12 @@ angular
           zip: $scope.zip,
           notes: $scope.notes
         });
-        $scope.name: '';
-        $scope.address: '';
-        $scopecity: '';
-        $scopest: '';
-        $scopezip: '';
-        $scopenotes: '';
+        $scope.name = '';
+        $scope.address = '';
+        $scopecity = '';
+        $scopest = '';
+        $scopezip = '';
+        $scopenotes = '';
       };
     }
   ])

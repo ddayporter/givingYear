@@ -21,7 +21,12 @@ angular
         .state('charities', {
           url: '/charities/{id}',
           templateUrl: 'charities/_charity-show.html',
-          controller: 'CharitiesCtrl'
+          controller: 'CharitiesCtrl',
+          resolve: {
+            charityPromise: ['charities', function(charities){
+              return charities.getAll();
+            }]
+          }
         })
         .state('search', {
           url: '/search',
@@ -34,17 +39,17 @@ angular
           controller: 'AuthCtrl',
           onEnter: ['$state', 'Auth', function($state, Auth) {
             Auth.currentUser().then(function (){
-              $state.go('home');
+              $state.go('dashboard');
             })
           }]
         })
         .state('signup', {
-          url: '/signup',
-          templateUrl: 'auth/_signup.html',
+          url: '/register',
+          templateUrl: 'auth/_register.html',
           controller: 'AuthCtrl',
           onEnter: ['$state', 'Auth', function($state, Auth) {
             Auth.currentUser().then(function (){
-              $state.go('home');
+              $state.go('dashboard');
             })
           }]
         });
