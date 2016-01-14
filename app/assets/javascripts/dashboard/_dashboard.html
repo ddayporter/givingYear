@@ -6,12 +6,41 @@
     </div>
   </div>
   <div class="col s12 m6">
-    <ul>
-      <li data-ng-repeat="charity in charities">{{charity.name}}</li>
-    </ul>
+    <div data-ng-repeat="charity in charities | orderBy: '-name'">
+      <a href="#/charities/{{charity.id}}">{{charity.name}}</a>
+    </div>
   </div>
 </div>
-<div class="row white">
+
+<form class="col s12 m6 offset-m3" data-ng-submit="addCharity()">
+  <h3>Add a new charity</h3>
+  <div class="row">
+    <div class="input field col s6 offset-s3">
+      <input type="text" class="validate" placeholder="Name" data-ng-model="name"></input>
+    </div>
+    <div class="input field col s6 offset-s3">
+      <input type="text" class="validate" placeholder="Address" data-ng-model="address"></input>
+    </div>
+    <div class="input field col s6 offset-s3">
+      <input type="text" class="validate" placeholder="City" data-ng-model="city"></input>
+    </div>
+    <div class="input field col s6 offset-s3">
+      <input type="text" class="validate" placeholder="State" data-ng-model="st"></input>
+    </div>
+    <div class="input field col s6 offset-s3">
+      <input type="text" class="validate" placeholder="ZIP" data-ng-model="zip"></input>
+    </div>
+    <div class="input field col s6 offset-s3">
+      <input type="textarea" class="validate" placeholder="Notes" data-ng-model="notes"></input>
+    </div>
+    <div class="col s6 offset-s3">
+      <button type="submit" class="btn waves-effect">Submit</button>
+    </div>
+  </div>
+</form>
+
+
+<!-- <div class="row white">
   <div class="about col s12 m6">
     <div class="flow-text">
       <h2>Your Giving</h2>
@@ -21,4 +50,4 @@
   <div class="col s12 m6">
     <h1>${{total_donations}}</h1>
   </div>
-</div>
+</div> -->

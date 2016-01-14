@@ -18,10 +18,15 @@ angular
           templateUrl: 'dashboard/_dashboard.html',
           controller: 'DashboardCtrl'
         })
+        .state('charities', {
+          url: '/charities/{id}',
+          templateUrl: 'charities/_charity-show.html',
+          controller: 'CharitiesCtrl'
+        })
         .state('search', {
           url: '/search',
           templateUrl: 'search/_search.html',
-          controller: 'CharityIndexCtrl'
+          controller: 'SearchCtrl'
         })
         .state('login', {
           url: '/login',

@@ -2,9 +2,10 @@
   box-sizing: border-box;
 }
 
-body {
+.welcome {
   background-image: url(asset-path('starrysky.jpeg'));
   background-size: cover;
+  height: 300px;
 }
 
 .welcome-message {

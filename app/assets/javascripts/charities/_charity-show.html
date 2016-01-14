@@ -1,0 +1,28 @@
+
+  <h2>
+      {{charity.name}}
+  </h2>
+  <p>{{charity.city}}, {{charity.state}}</p>
+
+  <div ng-repeat="donation in charity.donations | orderBy: '-date'">
+    <h3>{{donation.amount}} ({{donation.date}})</h3>
+    <p>Notes: {{donation.notes}}</p>
+  </div>
+
+  <form class="col s12 m6 offset-m3" ng-submit="addDonation()">
+    <h3>Add a new donation</h3>
+    <div class="row">
+      <div class="input field col s6 offset-s3">
+        <input type="text" class="validate" placeholder="Amount" ng-model="amount"></input>
+      </div>
+      <div class="input field col s6 offset-s3">
+        <input type="text" class="validate" placeholder="Date" ng-model="date"></input>
+      </div>
+      <div class="input field col s6 offset-s3">
+        <input type="textarea" class="validate" placeholder="notes" ng-model="notes"></input>
+      </div>
+      <div class="col s6 offset-s3">
+        <button type="submit" class="btn waves-effect">Submit</button>
+      </div>
+    </div>
+  </form>

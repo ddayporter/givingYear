@@ -2,7 +2,14 @@ angular
   .module("givingYear")
   .controller("SearchCtrl", [
     "$scope",
-    function($scope){
-      $scope.test = "Hello Search page!"
+    "$http",
+    function($scope, $http){
+      var request = {
+        method: 'GET',
+        url: '/guidestar/',
+      }
+      $http(request).then(function(response){
+        $scope.charities = response.data.hits;
+      });
     }
   ])

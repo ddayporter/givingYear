@@ -163,6 +163,7 @@ DEPENDENCIES
   devise (~> 3.4.0)
   jbuilder (~> 2.0)
   jquery-rails
+  json
   ngannotate-rails
   pg
   rails (= 4.2.4)
