@@ -18,7 +18,7 @@ $divider-color:        #B6B6B6;
 }
 
 .welcome-message {
-  color: white;
+  color: $primary-color-text;
   text-align: center;
   padding-top: 3.5em;
 }
@@ -31,19 +31,43 @@ $divider-color:        #B6B6B6;
 
 .about {
   padding: 30px;
-  background: rgb(59, 48, 55);
-  color: white;
+  background: $primary-color;
+  color: $primary-color-text;
+
+  a, a:hover {
+    color: $primary-color-text;
+  }
 }
 
-.giving {
-  padding: 30px;
-  background: gray;
+// .giving {
+//   padding: 30px;
+//   background: $primary-color;
+// }
+.row {
+  margin: 0;
 }
 
-.nav-wrapper {
-  background: rgba(40, 32, 51, 0.5)
+.list {
+  background: $primary-color-text;
+  color: $primary-text-color;
 }
 
 section {
   padding: 15px;
+}
+
+footer {
+  background: $primary-color-dark;
+  padding: 20px;
+  color: $primary-color-text;
+
+  div {
+    padding: 10px;
+  }
+  img {
+    width: 20px;
+  }
+  a, a:hover {
+    color: $primary-color-text;
+  }
 }

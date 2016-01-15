@@ -1,10 +1,10 @@
-<div class="row white">
+<div class="row">
   <div class="about col s12 m6">
       <h2>Saved Charities</h2>
       <p>Here is the list of charities you have saved to your account</p>
 
     <div data-ng-repeat="charity in charities | orderBy: '-name'">
-      <h3><a href="#/charities/{{charity.id}}">{{charity.name}}</a></h3>
+      <h4 class="charity"><a href="#/charities/{{charity.id}}">{{charity.name}}</a></h4>
       <p>Donations: {{charity.donations.length}}</p>
     </div>
   </div>

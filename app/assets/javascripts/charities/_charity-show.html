@@ -14,8 +14,10 @@
     <section>
       <h4>Donations</h4>
       <p>Below are donations made to this organization. Use the form to add a new one if you've made a donation recently.</p>
-
-      <div ng-repeat="donation in charity.donations | orderBy : '-created_at' : reverse">
+      <div class="list" data-ng-if="charity.donations.length === 0">
+        You have no donations for this organization.
+      </div>
+      <div class="list" ng-repeat="donation in charity.donations | orderBy : '-created_at' : reverse">
         <h3>${{donation.amount}}</h3>
         <p>Donation Date: {{donation.date | date : 'M/d/yyyy'}}</p>
         <p>Notes: {{donation.notes}}</p>
