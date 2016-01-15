@@ -1,5 +1,5 @@
 $primary-color-dark:   #455A64;
-$primary-color:        #607D8B;
+$primary-color:        #8956b6;
 $primary-color-light:  #CFD8DC;
 $primary-color-text:   #FFFFFF;
 $accent-color:         #00BCD4;
@@ -70,4 +70,8 @@ footer {
   a, a:hover {
     color: $primary-color-text;
   }
+}
+
+form {
+  padding-bottom: 20px;
 }
