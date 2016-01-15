@@ -1,5 +1,5 @@
 $primary-color-dark:   #455A64;
-$primary-color:        #8956b6;
+$primary-color:        #7b6185;
 $primary-color-light:  #CFD8DC;
 $primary-color-text:   #FFFFFF;
 $accent-color:         #00BCD4;
@@ -33,6 +33,7 @@ $divider-color:        #B6B6B6;
   padding: 30px;
   background: $primary-color;
   color: $primary-color-text;
+  min-height: 427px;
 
   a, a:hover {
     color: $primary-color-text;
